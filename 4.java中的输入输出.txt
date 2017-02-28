@@ -1,0 +1,11 @@
+ 功能：为指定的成绩进行加分，直到成绩大于等于６０分为止
+ * 通过scanner类获取用户的输入
+ * 步骤：
+ * 导入 java.util.Scanner
+ * import java.util.Scanner;
+ * 2.创建scanner对象
+ * Scanner input =new Scanner(System.in);
+ * 接受并保存用户输入的值
+ * 	input.next();  字符串类型
+    	input.nextInt(); 数字类型
+    	input.nextDouble() 双精度浮点型

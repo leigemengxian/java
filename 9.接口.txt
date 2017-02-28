@@ -1,0 +1,19 @@
+ 接口的实现
+*接口是一种特殊的类，里面全部是由全局常量和公共的抽象方法所组成
+*接口的格式
+*interface inferfacename{
+*全局常量
+*抽象方法
+*}
+* 1.接口的实现也是必须通过子类，使用关键字implements
+* class C implements Inter1
+* 2.接口是可以多继承的
+* class B  implements Inter1,Inter2
+* 3.对于一个子类，可以同时继承抽象类和实现接口
+* class B extends C implements Inter1,Inter2
+* 4.一个接口不能继承一个抽象类，但是可以通过extends关键字同时继承多个接口
+* interface Inter3 extends Inter1,Inter2
+* 实现接口的多继承。
+*
+*
+*

@@ -1,0 +1,40 @@
+this 关键字的使用
+ * 1. 表示类中的属性和调用方法
+ * 2.调用本类中的构造方法
+ * 3.表示当前的对象
+ *    1. 实现代码
+ *    class People{
+ *    int age ;
+ *    String name;
+ *     public People(int age,String name){
+ *       this.age=age; // 这里的this 表示类中的属性和调用方法
+ *       this.name=name;
+ *     }
+ *    }
+ *    2.本类中的构造方法
+ *    
+ *    class People{
+ *    int age ;
+ *    String name;
+ *     public People(int age,String name){
+ *       this();//这里的this指向的是我们的对应的构造函数People();
+ *            // 注意这个一定是放在最开始的，其他的地方会报错
+ *       this.age=age; // 这里的this 表示类中的属性和调用方法
+ *       this.name=name;
+ *     }
+ *     public People(){
+ *       System.out.println("你好，中国")；
+ *     }
+ *     
+ *     3.表示当前的对象
+ *      class People{
+ *        int age ;
+ *        String name;
+ *        public People(int age,String name){
+ *       this.age=age; // 这里的this 表示类中的属性和调用方法
+ *       this.name=name;
+ *     }
+ *     public tell(){
+ *     return this;//这里表示的就是people的对象
+ *    }
+ *    

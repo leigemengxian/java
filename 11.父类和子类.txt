@@ -1,0 +1,88 @@
+*        多态性
+*        1.多态性：
+*        方法的重写与重载
+*        对象的多态性
+*        1.向上转型： 自动实现
+*        父类 父类对象= 子类事例
+*      有意思的是 tell1 的方法是重写的，所以被调用的是被复写的内容
+*      /		B b=new B();
+//		A a =b;
+//		a.tell2();
+//		a.tell1();  //tell1 的方法是重写的，所以被调用的是被复写的内容
+*       2. 向下转型  强制实现
+*        子类  子类对象 = （子类） 父类实例
+*         A a =new B ();//必须得首先向上转型，才能向下转型的。
+		 B b =(B) a;
+		 b.tell3();
+		 b.tell1();
+		 b.tell2();
+		
+
+
+
+/// 使用的实际例子
+ 
+	  abstract class Person{
+	private int age ;
+	private String name;
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+   public 	Person(int age,String name){
+	   this.age=age;
+	   this.name=name;
+   }
+   abstract void want();
+}
+ class Student extends Person{
+	private int score;
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+	public Student(int age,String name,int score){
+		super(age,name);
+		this.score=score;
+	}
+	public void want (){
+		System.out.println("姓名"+getName()+"年龄"+ getAge()+"成绩"+ getScore());
+	}
+}
+ class Worker extends Person{
+	private int money;
+
+	public int getMoney() {
+		return money;
+	}
+
+	public void setMoney(int money) {
+		this.money = money;
+	}
+	public Worker (int age,String name,int money){
+		super(age,name);
+		this.money=money;
+	}
+	public void want (){
+		System.out.println("姓名"+getName()+"年龄"+ getAge()+"工资"+ getMoney());
+	}
+}
+		  调用的方法
+		  Person s=new Student(23,"孟宪磊",60);
+         s.want();
+        s=new Worker(33,"磊哥", 1000);
+        s.want();
+		  
+		  	 

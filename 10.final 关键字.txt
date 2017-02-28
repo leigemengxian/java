@@ -1,0 +1,9 @@
+	final 关键字
+ *   final 在java中成为
+ *   使用final 声明的类不能被继承
+ *   final class Student{}
+ *   使用final 声明的方法不能被重写
+ *   public final void tell(){}
+ *   使用final声明的变量变成了常量，不能被修改；
+ *   final String NAME="我是磊哥";//这个里里面的NAME不能被重写了
+ *   在一个文件中只能存在一个public class 	

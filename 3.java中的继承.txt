@@ -1,0 +1,62 @@
+*       
+ *       继承的实现：
+ *          继承的基本概念
+ *          2.java 中用extends 关键字来完成继承
+ *          class Person{
+	protected int age ;
+	protected String name;
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void tell(){
+   System.out.println("姓名"+getName()+" 年龄"+getAge());
+	}
+}
+class Student extends Person{
+	private int score;
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+	public void say(){
+		System.out.println("成绩"+ getScore());
+	}
+	
+}
+ *   继承中的要求
+ *         1. 在java中只允许单继承（1个孩子只有一个父亲）
+ *         2. 在子类中不允许直接访问父类的私有成员
+ *          类名的首字母最好要大写。
+ *          
+ *  子类对象的实例化
+ *  子类对象的实例化过程是首先是父类的构造方法，然后才是子类的构造方法
+ *  
+ *  
+ *  方法的重写
+ *  在继承中，在子类定义了和父类同名的方法， 一般就成为重写了。
+ *  如何在我们的子类中使用父类
+ *  super.名字（）；
+ *  public void tell(){
+		super.tell();
+		   System.out.println("我是老大");
+			} 
+			注意：一定是在子类中的同名函数中，用super.
+			
+			重写的限制：
+			被重写的方法，不能有比父类更严格的访问权限
+			访问权限：
+			private<<default<public 
+			
